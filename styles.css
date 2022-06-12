@@ -1,0 +1,338 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+/* containers and sections */
+.main{
+    background-color: #154285;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.timeline{
+    margin-bottom: 2em;
+}
+
+.quote-container{
+    margin-bottom: 2em;
+}
+
+.timeline-text, .quote-container{
+    padding: 0 1em;
+}
+
+footer{
+    padding: 0 1em 2.5em 1em;
+    text-align: center;
+}
+
+/* Typography */
+h1, h2{
+    font-family: 'Averia Libre', cursive;
+    font-weight: bold;
+}
+
+p,span, li{
+    font-family: 'Averia Libre', cursive;
+}
+
+p, li{
+    font-weight: 400;
+}
+
+ul > li{
+    margin-bottom: 1.5em;
+}
+
+span{
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+footer p {
+    text-align: center;
+}
+
+.text-container{
+    color: white;
+}
+
+.text-container h1{
+    text-align: center;
+}
+
+.text-container p{
+    text-align: center;
+}
+
+.quote-container .quote-name{
+    text-align: right;
+}
+
+.timeline-text ul{
+    list-style: none;
+}
+
+/* Image Elements */
+.image-container{
+    display: grid;
+    place-items: center;
+}
+
+.main-image{
+    width: 250px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.bobber{
+    display: none;
+}
+
+/* Timeline Section Styling */
+.timeline{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.header h2{
+    font-family: 'Averia Libre', cursive;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 0.269em;
+    font-size: 1rem;
+    line-height: 3;
+    text-align: center;
+}
+
+/* Progress Bar */
+/* The progress container (grey background) */
+.progress-container {
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+}
+  
+  /* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 2px;
+    background: #154285;
+    width: 0%;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 500px){
+
+    /* Typography */
+    .text-container h1{
+        font-size: 2rem;
+    }
+    
+    p, li{
+        font-size: 1.2rem;
+    }
+
+    .header h2{
+        font-size: 1.6rem;
+    }
+
+    span{
+        font-size: 1.4rem;
+    }
+
+    /* Progress Bar */
+    /* The progress container */
+    .progress-container {
+        height: 4px;
+    }
+    
+    /* The progress bar (scroll indicator) */
+    .progress-bar {
+        height: 4px;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    /* Typography */
+    .text-container h1{
+        font-size: 2.2rem;
+        margin-bottom: 0.5em;
+    }
+    
+    p, li{
+        font-size: 1.4rem;
+    }
+
+    .header h2{
+        font-size: 1.9rem;
+    }
+
+    span{
+        font-size: 1.4rem;
+    }
+
+    .main{
+        padding-bottom: 8em;
+        position: relative;
+    }
+    .bio-container{
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .timeline{
+        margin-bottom: 3em;
+    }
+    .timeline-container{
+        width: 80vw;
+        margin: 0 auto;
+    }
+    .bobber{
+        display: block;
+        width: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 49%;
+        animation: arrowbop 1s alternate-reverse infinite ease;
+    }
+    @keyframes arrowbop {
+        from {
+          transform: translateY(-30px);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+}
+
+@media only screen and (min-width: 1000px){
+    .bio-container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 2fr 1.2fr;
+        padding-top: 7em;
+        padding-bottom: 3em;
+    }
+    .main-image{
+        width: 280px;
+    }
+    .bobber{
+        width: 25px;
+    }
+    .image-container{
+        order: 2;
+    }
+    .text-container h1{
+        text-align: left;
+    }
+    .timeline{
+        margin-bottom: 3.5em;
+    }
+    .text-container p{
+        text-align: left;
+        width: 91%;
+    }
+    p,span, li{
+        text-align: left;
+    }
+    .timeline-container{
+        width: 70vw;
+        margin: 0 auto;
+    }
+    .quote-container{
+        margin-top: 3em;
+        margin-bottom: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    /* Images */
+    .main-image{
+        width: 330px;
+    }
+    .bobber{
+        width: 30px;
+    }
+
+    /* Typography */
+    .text-container h1{
+        font-size: 2.5rem;
+        /* letter-spacing: 0.15em; */
+    }
+    .text-container p{
+        text-align: left;
+        width: 95%;
+    }
+
+    p, li{
+        font-size: 1.6rem;
+    }
+
+    .header h2{
+        font-size: 2.1rem;
+    }
+
+    span{
+        font-size: 1.9rem;
+    }
+
+    .timeline{
+        margin-bottom: 4em;
+    }
+
+    footer{
+        margin-top: 3.5em;
+        margin-bottom: 2em;
+    }
+
+}
+
+@media only screen and (min-width: 1500px){
+    /* Images */
+    .main-image{
+        width: 380px;
+    }
+    .bobber{
+        width: 40px;
+    }
+
+     /* Typography */
+    .text-container h1{
+        letter-spacing: 0.096em;
+        font-size: 3rem;
+    }
+    .text-container p{
+        text-align: left;
+        width: 95%;
+    }
+    p, li{
+        font-size: 1.9rem;
+    }
+    .header h2{
+        font-size: 2.8rem;
+    }
+    span{
+        font-size: 2.5rem;
+    }
+
+    /* Progress Bar */
+    /* The progress container */
+    .progress-container {
+        height: 6px;
+    }
+    
+    /* The progress bar (scroll indicator) */
+    .progress-bar {
+        height: 6px;
+    }    
+}
